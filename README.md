@@ -18,7 +18,7 @@ Shafira Khaerunnisa Latif - 5027201072
 | getalluser | Admin | API untuk mengambil data semua user|  
 | getoneuser | Admin | API untuk mengambil data satu user|  
 | deleteuser | Admin | API untuk menghapus user |  
-| addproduct | User | API untuk menambahkan produk yang dijual) |  
+| addproduct | User | API untuk menambahkan produk yang dijual |  
 | updateproduct | User | API untuk memperbarui data produk yang dijual |  
 | getmyproduct | User | API untuk menampilkan produk yang dijual oleh user |  
 | deleteproduct | User | API untuk menghapus produk yang dijual oleh user |  
@@ -26,23 +26,71 @@ Shafira Khaerunnisa Latif - 5027201072
 | sendorder | User | API untuk mengirimkan pesanan agar diproses |  
 | withdraw | User | API untuk menarik saldo dari e-money pembeli |  
 | order | User | API untuk melakukan pesanan oleh user |  
-| payment | User | API untuk melakukan pembayaran oleh user) |  
-| confirm | User | API untuk mengonfirmasi pesanan oleh user) |  
+| payment | User | API untuk melakukan pembayaran oleh user |  
+| confirm | User | API untuk mengonfirmasi pesanan oleh user |  
 | myorder | User | API untuk menampilkan rincian pesanan user |  
 | getprofile | User | API untuk menampilkan profil dari user |  
 | updateprofile | User | API untuk memperbarui profil dari user |  
 | getallorder | User | API untuk menampilkan seluruh pesanan yang dilakukan user |  
 
 ### register
+ * Method : `POST`
+ * Alamat URL : https://baboo-kelompok6.herokuapp.com/api/register
+ * Autentikasi : -
+ * Parameter :
 
+| Parameter | Description | 
+| ----------- | ----------- | 
+| username | Berupa string dan tidak boleh sama dengan user lain |
+| email | Berupa email user dengan format menggunakan @ dan belum pernah digunakan untuk register sebelumnya |
+| password | Bebas berupa string atau angka dan tidak ada ketentuan |
+| phone | Berupa nomor hp user dengan panjang max. 15 char dan belum pernah digunakan untuk register sebelumnnya |
 
+### login
+* Method : `POST`
+* Alamat URL : https://baboo-kelompok6.herokuapp.com/api/login
+* Autentikasi : -
+* Parameter :
 
+| Parameter | Description |  
+| ----------- | ----------- | 
+| phone | Berupa nomor hp yang sudah terdaftar saat register |
+| password | Berupa string yang sudah terdaftar saat register |
 
+### searchproduct
+* Method : `GET`
+* Alamat URL : https://baboo-kelompok6.herokuapp.com/api/search
+* Autentikasi : -
+* Parameter :
 
+| Parameter | Description |  
+| ----------- | ----------- | 
+| booktitle | Bebas berupa string atau angka dan tidak ada ketentuan |
+| author | Bebas berupa string atau angka dan tidak ada ketentuan |
 
+### getallproduct
+* Method : `GET`
+* Alamat URL : 
+* Autentikasi : -
+* Parameter : -
 
+### getalluser
+* Method : `GET`
+* Alamat URL : https://baboo-kelompok6.herokuapp.com/api/admin
+* Autentikasi : Admin
+* Parameter : -
 
+### getoneuser
+* Method : `GET`
+* Alamat URL : https://baboo-kelompok6.herokuapp.com/api/admin/:id
+* Autentikasi : Admin
+* Parameter : -
 
+### deleteuser
+* Method : `DEL`
+* Alamat URL : https://baboo-kelompok6.herokuapp.com/api/admin/:id
+* Autentikasi : Admin
+* Parameter : -
 
 ### addproduct
   * Method : `POST`
@@ -57,6 +105,34 @@ Shafira Khaerunnisa Latif - 5027201072
 | price | Berupa float |
 | stock | Berupa apa |
 
+ * Contoh 1
+
+`POST` https://baboo-kelompok6.herokuapp.com/api/user/product
+Parameter
+```
+{
+    "booktitle": "dilan 2002",
+    "author": "vidi jahad",
+    "price": "50000",
+    "stock": "3"
+}
+```
+Respons
+
+* Contoh 2
+`POST` https://baboo-kelompok6.herokuapp.com/api/user/product
+Parameter
+```
+{
+    "booktitle": "to all the boys i hate",
+    "author": "peter",
+    "price": "100000",
+    "stock": "2"
+}
+```
+Respons
+
+
 ### updateproduct
   * Method : `PUT`
   * Alamat URL : https://baboo-kelompok6.herokuapp.com/api/user/product
@@ -68,11 +144,39 @@ Shafira Khaerunnisa Latif - 5027201072
 | newprice | Berupa harga baru yang dipasang pada suatu produk dalam float |
 | newstock | Berupa stok baru yang dipasang untuk suatu produk dalam integer |
 
+* Contoh 1
+`PUT` https://baboo-kelompok6.herokuapp.com/api/user/product
+Parameter
+```
+{
+    "id_product": "3",
+    "newprice": "30000",
+    "newstock": "5"
+}
+```
+Respons
+
+* Contoh 2
+`PUT` https://baboo-kelompok6.herokuapp.com/api/user/product
+Parameter
+```
+{
+    "id_product": "4",
+    "newprice": "10000",
+    "newstock": "1"
+}
+```
+Respons
+
 ### getmyproduct
   * Method : `GET`
   * Alamat URL : https://baboo-kelompok6.herokuapp.com/api/user/product
   * Autentikasi : User
   * Parameter : -
+
+* Contoh 1
+`GET` https://baboo-kelompok6.herokuapp.com/api/user/product
+Respons
   
 ### deleteproduct
   * Method : `DELETE`
