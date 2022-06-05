@@ -120,6 +120,7 @@ Parameter
 Respons
 
 * Contoh 2
+
 `POST` https://baboo-kelompok6.herokuapp.com/api/user/product
 Parameter
 ```
@@ -145,6 +146,7 @@ Respons
 | newstock | Berupa stok baru yang dipasang untuk suatu produk dalam integer |
 
 * Contoh 1
+
 `PUT` https://baboo-kelompok6.herokuapp.com/api/user/product
 Parameter
 ```
@@ -157,6 +159,7 @@ Parameter
 Respons
 
 * Contoh 2
+
 `PUT` https://baboo-kelompok6.herokuapp.com/api/user/product
 Parameter
 ```
@@ -175,6 +178,7 @@ Respons
   * Parameter : -
 
 * Contoh 1
+
 `GET` https://baboo-kelompok6.herokuapp.com/api/user/product
 Respons
   
