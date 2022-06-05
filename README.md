@@ -46,6 +46,23 @@ Shafira Khaerunnisa Latif - 5027201072
 | password | Bebas berupa string atau angka dan tidak ada ketentuan |
 | phone | Berupa nomor hp user dengan panjang max. 15 char dan belum pernah digunakan untuk register sebelumnnya |
 
+ * Contoh 1
+
+`POST` https://baboo-kelompok6.herokuapp.com/api/register
+Parameter
+```
+{
+    "username": "hecani",
+    "password": "hecani",
+    "email": "hecani@gmail.com",
+    "phone": "081289034450"
+}
+```
+Respons
+
+* Contoh 2
+
+
 ### login
 * Method : `POST`
 * Alamat URL : https://baboo-kelompok6.herokuapp.com/api/login
@@ -56,6 +73,21 @@ Shafira Khaerunnisa Latif - 5027201072
 | ----------- | ----------- | 
 | phone | Berupa nomor hp yang sudah terdaftar saat register |
 | password | Berupa string yang sudah terdaftar saat register |
+
+ * Contoh 1
+
+`POST` https://baboo-kelompok6.herokuapp.com/api/login
+Parameter
+```
+{
+    {
+    "phone": "081289034450",
+    "password": "hecani"
+}
+```
+Respons
+
+* Contoh 2
 
 ### searchproduct
 * Method : `GET`
@@ -125,10 +157,7 @@ Respons
 Parameter
 ```
 {
-    "booktitle": "to all the boys i hate",
-    "author": "peter",
-    "price": "100000",
-    "stock": "2"
+   
 }
 ```
 Respons
@@ -164,9 +193,7 @@ Respons
 Parameter
 ```
 {
-    "id_product": "4",
-    "newprice": "10000",
-    "newstock": "1"
+    
 }
 ```
 Respons
