@@ -66,7 +66,7 @@ Shafira Khaerunnisa Latif - 5027201072
 | Parameter | Description | 
 | ----------- | ------ |
 | newprice | Berupa harga baru yang dipasang pada suatu produk dalam float |
-| newstock | Berupa angka yang mengisi stok dalam integer |
+| newstock | Berupa stok baru yang dipasang untuk suatu produk dalam integer |
 
 ### getmyproduct
   * Method : `GET`
@@ -86,13 +86,13 @@ Shafira Khaerunnisa Latif - 5027201072
 
 ### incomingorder
   * Method : `GET`
-  * Alamat URL : https://baboo-kelompok6.herokuapp.com/api/user/product
+  * Alamat URL : https://baboo-kelompok6.herokuapp.com/api/user/incomingorder
   * Autentikasi : User
   * Parameter : -
 
 ### sendorder
   * Method : `POST`
-  * Alamat URL : https://baboo-kelompok6.herokuapp.com/api/user/product
+  * Alamat URL : https://baboo-kelompok6.herokuapp.com/api/user/send
   * Autentikasi : User
   * Parameter :
   
@@ -102,7 +102,7 @@ Shafira Khaerunnisa Latif - 5027201072
 
 ### withdraw
   * Method : `POST`
-  * Alamat URL : https://baboo-kelompok6.herokuapp.com/api/user/product
+  * Alamat URL : https://baboo-kelompok6.herokuapp.com/api/user/withdraw
   * Autentikasi : User
   * Parameter :
   
@@ -111,5 +111,72 @@ Shafira Khaerunnisa Latif - 5027201072
 | amount | Berupa angka dalam float yang akan ditarik untuk proses pembayaran |
 | emoney | Berupa nama emoney yang digunakan |
 | phone_emoney | Berupa nomor hp dari akun emoney yang digunakan |
+
+### order
+  * Method : `POST`
+  * Alamat URL : https://baboo-kelompok6.herokuapp.com/api/user/order
+  * Autentikasi : User
+  * Parameter :
+  
+| Parameter | Description | 
+| ----------- | ----------- | 
+| idproduct | Berupa integer sebagai identifikasi produk |
+| quantity | Berupa integer untuk menjelaskan jumlah suatu produk |
+
+### payment
+  * Method : `POST`
+  * Alamat URL : https://baboo-kelompok6.herokuapp.com/api/user/payment
+  * Autentikasi : User
+  * Parameter :
+  
+| Parameter | Description | 
+| ----------- | ----------- | 
+| id_order | Berupa integer sebagai identifikasi order |
+| emoney | Berupa nama emoney yang digunakan |
+| username_emoney | Berupa nama user pada akun emoney yang digunakan |
+| phone_emoney | Berupa nomor hp dari akun emoney yang digunakan |
+| password_emoney | Berupa password pada akun emoney yang digunakan |
+| email_emoney | Berupa email pada akun emoney yang digunakan |
+
+### confirmorder
+  * Method : `POST`
+  * Alamat URL : https://baboo-kelompok6.herokuapp.com/api/user/confirm
+  * Autentikasi : User
+  * Parameter :
+  
+| Parameter | Description | 
+| ----------- | ----------- | 
+| id_order | Berupa integer sebagai identifikasi order |
+
+### myorder
+  * Method : `GET`
+  * Alamat URL : https://baboo-kelompok6.herokuapp.com/api/user/myorder
+  * Autentikasi : User
+  * Parameter : -
+
+### getprofile
+  * Method : `GET`
+  * Alamat URL : https://baboo-kelompok6.herokuapp.com/api/user/profile
+  * Autentikasi : User
+  * Parameter : -
+
+### updateprofile
+  * Method : `PUT`
+  * Alamat URL : https://baboo-kelompok6.herokuapp.com/api/user/profile
+  * Autentikasi : User
+  * Parameter :
+  
+| Parameter | Description | 
+| ----------- | ----------- | 
+| newusername | Berupa nama baru pada profil yang ingin diperbarui |
+| newemail | Berupa email baru pada profil yang ingin diperbarui |
+| newphone | Berupa nomor hp baru pada profil yang ingin diperbarui |
+| newpassword | Berupa password baru pada profil yang ingin diperbarui |
+
+### getallorder
+  * Method : `GET`
+  * Alamat URL : https://baboo-kelompok6.herokuapp.com/api/user/order
+  * Autentikasi : User
+  * Parameter : -
 
 
