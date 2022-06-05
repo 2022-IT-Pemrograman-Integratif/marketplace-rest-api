@@ -80,7 +80,6 @@ Respons
 Parameter
 ```
 {
-    {
     "phone": "081289034450",
     "password": "hecani"
 }
@@ -99,6 +98,20 @@ Respons
 | ----------- | ----------- | 
 | booktitle | Bebas berupa string atau angka dan tidak ada ketentuan |
 | author | Bebas berupa string atau angka dan tidak ada ketentuan |
+
+ * Contoh 1
+
+`POST` https://baboo-kelompok6.herokuapp.com/api/search
+Parameter
+```
+{
+  "booktitle": "dilan 2002",
+    "author": "vidi jahad"
+}
+```
+Respons
+
+* Contoh 2
 
 ### getallproduct
 * Method : `GET`
@@ -219,11 +232,28 @@ Respons
 | ----------- | ----------- | 
 | id_order | Berupa integer sebagai identifikasi order |
 
+* Contoh 1
+
+`DEL` https://baboo-kelompok6.herokuapp.com/api/user/product
+Parameter
+```
+{
+    "id_order": "3"
+}
+```
+Respons
+
+* Contoh 2
+
 ### incomingorder
   * Method : `GET`
   * Alamat URL : https://baboo-kelompok6.herokuapp.com/api/user/incomingorder
   * Autentikasi : User
   * Parameter : -
+  * Contoh 1
+
+`GET` https://baboo-kelompok6.herokuapp.com/api/user/incomingorder
+Respons
 
 ### sendorder
   * Method : `POST`
@@ -234,6 +264,19 @@ Respons
 | Parameter | Description | 
 | ----------- | ----------- | 
 | id_order | Berupa integer sebagai identifikasi order |
+
+* Contoh 1
+
+`POST` https://baboo-kelompok6.herokuapp.com/api/user/send
+Parameter
+```
+{
+    "id_order": "4"
+}
+```
+Respons
+
+* Contoh 2
 
 ### withdraw
   * Method : `POST`
