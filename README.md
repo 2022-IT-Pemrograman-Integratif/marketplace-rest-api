@@ -62,6 +62,7 @@ Parameter
 ```
 Respons
 
+![register1](https://user-images.githubusercontent.com/76768695/172153763-da412510-497d-4560-b034-3db272b97ef1.PNG)
 
 * Contoh 2
 
@@ -79,6 +80,7 @@ Parameter
 ```
 Respons
 
+![register2](https://user-images.githubusercontent.com/76768695/172153765-a09807e4-f8a1-4c78-8772-6e40be96e9b3.PNG)
 
 ### login
 * Method : `POST`
@@ -105,6 +107,7 @@ Parameter
 ```
 Respons
 
+![login1](https://user-images.githubusercontent.com/76768695/172153759-b7453898-293a-40fe-bfdb-6856b03878ed.PNG)
 
 * Contoh 2
 
@@ -120,6 +123,7 @@ Parameter
 ```
 Respons
 
+![login2](https://user-images.githubusercontent.com/76768695/172153761-9bdea434-f87b-424d-b2d7-57f1b58e15b0.PNG)
 
 ### searchproduct
 * Method : `GET`
@@ -146,6 +150,8 @@ Parameter
 ```
 Respons
 
+![search1](https://user-images.githubusercontent.com/76768695/172153769-3a4d5487-bd8b-4bf6-8ffc-8b20a5beeba7.PNG)
+
 * Contoh 2
 
 `POST` https://baboo-kelompok6.herokuapp.com/api/search
@@ -160,6 +166,8 @@ Parameter
 ```
 Respons
 
+![search2](https://user-images.githubusercontent.com/76768695/172153771-d2d018be-f315-4374-bc5d-75c43eaafa0b.PNG)
+
 ### getallproduct
 * Method : `GET`
 * Alamat URL : https://baboo-kelompok6.herokuapp.com/api/product
@@ -172,24 +180,58 @@ Respons
 
 Respons
 
+![getallpro1](https://user-images.githubusercontent.com/76768695/172153804-e519efac-761d-488f-9e94-8d65dcade486.PNG)
 
 ### getalluser
 * Method : `GET`
 * Alamat URL : https://baboo-kelompok6.herokuapp.com/api/admin
 * Autentikasi : Admin
 * Parameter : -
+ * Contoh 1
+
+`GET` https://baboo-kelompok6.herokuapp.com/api/admin
+
+Respons
+
+* Contoh 2
+
+`GET` https://baboo-kelompok6.herokuapp.com/api/admin
+
+Respons
 
 ### getoneuser
 * Method : `GET`
 * Alamat URL : https://baboo-kelompok6.herokuapp.com/api/admin/:id
 * Autentikasi : Admin
 * Parameter : -
+ * Contoh 1
+
+`GET` https://baboo-kelompok6.herokuapp.com/api/admin/:id
+
+Respons
+
+* Contoh 2
+
+`GET` https://baboo-kelompok6.herokuapp.com/api/admin/:id
+
+Respons
 
 ### deleteuser
 * Method : `DEL`
 * Alamat URL : https://baboo-kelompok6.herokuapp.com/api/admin/:id
 * Autentikasi : Admin
 * Parameter : -
+* Contoh 1
+
+`DEL` https://baboo-kelompok6.herokuapp.com/api/admin/:id
+
+Respons
+
+* Contoh 2
+
+`DEL` https://baboo-kelompok6.herokuapp.com/api/admin/:id
+
+Respons
 
 ### addproduct
   * Method : `POST`
@@ -204,7 +246,7 @@ Respons
 | price | Berupa float |
 | stock | Berupa apa |
 
- * Contoh 1
+ * Contoh 
 
 `POST` https://baboo-kelompok6.herokuapp.com/api/user/product
 
@@ -220,19 +262,7 @@ Parameter
 ```
 Respons
 
-* Contoh 2
-
-`POST` https://baboo-kelompok6.herokuapp.com/api/user/product
-
-
-Parameter
-```
-{
-   
-}
-```
-Respons
-
+![addpro1](https://user-images.githubusercontent.com/76768695/172153796-5786d434-695f-49d5-9441-3cc9e5ce97c5.PNG)
 
 ### updateproduct
   * Method : `PUT`
@@ -260,6 +290,8 @@ Parameter
 ```
 Respons
 
+![updatepro1](https://user-images.githubusercontent.com/76768695/172153782-7ae75ff6-2cf2-409d-bab2-34ce6ed89330.PNG)
+
 * Contoh 2
 
 `PUT` https://baboo-kelompok6.herokuapp.com/api/user/product
@@ -268,10 +300,14 @@ Respons
 Parameter
 ```
 {
-    
+    "id_product": "9",
+    "newprice": "30000",
+    "newstock": "5"
 }
 ```
 Respons
+
+![updatepro2](https://user-images.githubusercontent.com/76768695/172153792-a60429b7-5cc5-4ba7-8b2d-7b93fc7d3181.PNG)
 
 ### getmyproduct
   * Method : `GET`
@@ -279,10 +315,13 @@ Respons
   * Autentikasi : User
   * Parameter : -
 
-* Contoh 1
+* Contoh 
 
 `GET` https://baboo-kelompok6.herokuapp.com/api/user/product
+
 Respons
+
+![getmypro1](https://user-images.githubusercontent.com/76768695/172153752-037b1448-fb86-4958-bf7e-9fb4b34add36.PNG)
   
 ### deleteproduct
   * Method : `DELETE`
@@ -294,7 +333,7 @@ Respons
 | ----------- | ----------- | 
 | id_order | Berupa integer sebagai identifikasi order |
 
-* Contoh 1
+* Contoh 
 
 `DEL` https://baboo-kelompok6.herokuapp.com/api/user/product
 
@@ -302,23 +341,24 @@ Respons
 Parameter
 ```
 {
-    "id_order": "3"
+    "id_product": "3"
 }
 ```
 Respons
 
-* Contoh 2
+![deletepro1](https://user-images.githubusercontent.com/76768695/172153800-731b7338-e41b-43c3-a1b2-177c8f850e01.PNG)
 
 ### incomingorder
   * Method : `GET`
   * Alamat URL : https://baboo-kelompok6.herokuapp.com/api/user/incomingorder
   * Autentikasi : User
   * Parameter : -
-  * Contoh 1
+  * Contoh 
 
 `GET` https://baboo-kelompok6.herokuapp.com/api/user/incomingorder
 
 Respons
+
 
 ### sendorder
   * Method : `POST`
