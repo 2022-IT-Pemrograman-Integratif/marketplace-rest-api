@@ -193,11 +193,15 @@ Respons
 
 Respons
 
+![getalluser1](https://user-images.githubusercontent.com/76768695/172266248-bacad71a-f768-4a40-b378-5ebd9499bc24.PNG)
+
 * Contoh 2
 
 `GET` https://baboo-kelompok6.herokuapp.com/api/admin
 
 Respons
+
+![getalluser2](https://user-images.githubusercontent.com/76768695/172266251-acdcd404-a726-4182-a509-85f2cb1ef30c.PNG)
 
 ### getoneuser
 * Method : `GET`
@@ -210,11 +214,15 @@ Respons
 
 Respons
 
+![getoneuser1](https://user-images.githubusercontent.com/76768695/172266255-3b0740cd-fc98-4fb6-86ef-cd181d4c5682.PNG)
+
 * Contoh 2
 
 `GET` https://baboo-kelompok6.herokuapp.com/api/admin/:id
 
 Respons
+
+![getoneuser2](https://user-images.githubusercontent.com/76768695/172266257-19510b96-2edb-473d-809b-7d7b309b6e66.PNG)
 
 ### deleteuser
 * Method : `DEL`
@@ -227,11 +235,15 @@ Respons
 
 Respons
 
+![deleteprof1](https://user-images.githubusercontent.com/76768695/172266153-df06d0e6-e3ee-43c7-b0d2-7db5dcb11929.PNG)
+
 * Contoh 2
 
 `DEL` https://baboo-kelompok6.herokuapp.com/api/admin/:id
 
 Respons
+
+![getoneuser2](https://user-images.githubusercontent.com/76768695/172266257-19510b96-2edb-473d-809b-7d7b309b6e66.PNG)
 
 ### addproduct
   * Method : `POST`
@@ -359,6 +371,11 @@ Respons
 
 Respons
 
+![incoming1](https://user-images.githubusercontent.com/76768695/172262854-ee71111d-e6a8-4e52-91ed-5bed0290694e.PNG)
+
+Respons
+
+![incoming2](https://user-images.githubusercontent.com/76768695/172262867-e1593c2b-d65f-4a8d-aee4-21d89ee77bf1.PNG)
 
 ### sendorder
   * Method : `POST`
@@ -383,7 +400,37 @@ Parameter
 ```
 Respons
 
+![sendorder1](https://user-images.githubusercontent.com/76768695/172263509-1a26fd52-b981-4ae3-8d07-0c6a097820cb.PNG)
+
 * Contoh 2
+
+`POST` https://baboo-kelompok6.herokuapp.com/api/user/send
+
+
+Parameter
+```
+{
+    "id_order": "4"
+}
+```
+Respons
+
+![sendorder3](https://user-images.githubusercontent.com/76768695/172263514-ec57b3e3-25e6-4291-9170-c10fe4229938.PNG)
+
+* Contoh 3
+
+`POST` https://baboo-kelompok6.herokuapp.com/api/user/send
+
+
+Parameter
+```
+{
+    "id_order": "4"
+}
+```
+Respons
+
+![sendorder2](https://user-images.githubusercontent.com/76768695/172263513-399be9db-8245-4f99-a593-9a5f0af8e7c7.PNG)
 
 ### withdraw
   * Method : `POST`
@@ -408,6 +455,39 @@ Respons
 | idproduct | Berupa integer sebagai identifikasi produk |
 | quantity | Berupa integer untuk menjelaskan jumlah suatu produk |
 
+* Contoh 1
+
+`POST` https://baboo-kelompok6.herokuapp.com/api/user/order
+
+
+Parameter
+```
+{
+    "id_product": "6",
+    "quantity": "2"
+}
+```
+Respons
+
+![order1](https://user-images.githubusercontent.com/76768695/172213144-5d2315e0-d23b-441d-b800-8b260e6800ca.PNG)
+
+* Contoh 2
+
+`POST` https://baboo-kelompok6.herokuapp.com/api/user/order
+
+
+Parameter
+```
+{
+    "id_product": "6",
+    "quantity": "2"
+}
+```
+Respons
+
+![order2](https://user-images.githubusercontent.com/76768695/172213789-caa91d6c-52c1-4dc2-8bdc-e54911c334e9.PNG)
+a.PNG)
+
 ### payment
   * Method : `POST`
   * Alamat URL : https://baboo-kelompok6.herokuapp.com/api/user/payment
@@ -423,6 +503,66 @@ Respons
 | password_emoney | Berupa password pada akun emoney yang digunakan |
 | email_emoney | Berupa email pada akun emoney yang digunakan |
 
+* Contoh 1
+
+`POST` https://baboo-kelompok6.herokuapp.com/api/user/payment
+
+
+Parameter
+```
+{
+    "id_order": "2",
+    "emoney": "payfresh",
+    "username_emoney": "moneyz",
+    "phone_emoney": "081547123869",
+    "password_emoney": "moneyz123",
+    "email_emoney": "moneyz@gmail.com"
+}
+```
+Respons
+
+![pay1](https://user-images.githubusercontent.com/76768695/172262150-7504b288-3a4d-4db7-adec-6bbc8039819a.PNG)
+
+* Contoh 2
+
+`POST` https://baboo-kelompok6.herokuapp.com/api/user/payment
+
+
+Parameter
+```
+{
+    "id_order": "2",
+    "emoney": "payfresh",
+    "username_emoney": "moneyz",
+    "phone_emoney": "081547123869",
+    "password_emoney": "moneyz123",
+    "email_emoney": "moneyz@gmail.com"
+}
+```
+Respons
+
+![pay3](https://user-images.githubusercontent.com/76768695/172262584-740bf6a5-867f-413e-843e-dd809f0eea40.PNG)
+
+* Contoh 3
+
+`POST` https://baboo-kelompok6.herokuapp.com/api/user/payment
+
+
+Parameter
+```
+{
+    "id_order": "2",
+    "emoney": "payfresh",
+    "username_emoney": "moneyz",
+    "phone_emoney": "081547123869",
+    "password_emoney": "moneyz123",
+    "email_emoney": "moneyz@gmail.com"
+}
+```
+Respons
+
+![pay2](https://user-images.githubusercontent.com/76768695/172262140-54b1142a-becd-4c75-8b15-24fbf3be2a92.PNG)
+
 ### confirmorder
   * Method : `POST`
   * Alamat URL : https://baboo-kelompok6.herokuapp.com/api/user/confirm
@@ -432,6 +572,51 @@ Respons
 | Parameter | Description | 
 | ----------- | ----------- | 
 | id_order | Berupa integer sebagai identifikasi order |
+
+* Contoh 1
+
+`POST` https://baboo-kelompok6.herokuapp.com/api/user/confirm
+
+
+Parameter
+```
+{
+    "id_order": "4",
+}
+```
+Respons
+
+![confirm1](https://user-images.githubusercontent.com/76768695/172264349-45b2b231-1734-47ff-9de0-c3606e8b6ea6.PNG)
+
+* Contoh 2
+
+`POST` https://baboo-kelompok6.herokuapp.com/api/user/confirm
+
+
+Parameter
+```
+{
+    "id_order": "4"
+}
+```
+Respons
+
+![confirm3](https://user-images.githubusercontent.com/76768695/172264355-1de57faa-6dec-4c8e-aaae-de742bca221e.PNG)
+
+* Contoh 3
+
+`POST` https://baboo-kelompok6.herokuapp.com/api/user/confirm
+
+
+Parameter
+```
+{
+    "id_order": "4"
+}
+```
+Respons
+
+![confirm2](https://user-images.githubusercontent.com/76768695/172264352-b81646d7-599b-4a15-94fa-e6f3779bd399.PNG)
 
 ### myorder
   * Method : `GET`
@@ -444,6 +629,11 @@ Respons
 
 Respons
 
+![myorder1](https://user-images.githubusercontent.com/76768695/172263230-b93b347a-aa12-4d60-a2e5-601a06fad0bd.PNG)
+
+Respons
+
+![myorder2](https://user-images.githubusercontent.com/76768695/172263232-047877ac-f2cc-4e07-8a17-94b797248224.PNG)
 
 ### getprofile
   * Method : `GET`
@@ -455,6 +645,9 @@ Respons
 `GET` https://baboo-kelompok6.herokuapp.com/api/user/profile
 
 Respons
+
+![getprof1](https://user-images.githubusercontent.com/76768695/172260984-2cc36ea3-cf99-425f-8806-73ab71b94234.PNG)
+
 
 ### updateprofile
   * Method : `PUT`
@@ -485,13 +678,7 @@ Parameter
 ```
 Respons
 
-
-* Contoh 2
-
-`PUT` https://baboo-kelompok6.herokuapp.com/api/user/profile
-
-Respons
-
+![updateprof1](https://user-images.githubusercontent.com/76768695/172260991-a849cdf6-3d1a-4068-aef9-85aa0386234b.PNG)
 
 
 ### getallorder
@@ -505,6 +692,7 @@ Respons
 
 Respons
 
+![getallorder](https://user-images.githubusercontent.com/76768695/172266829-56499407-bcc8-4340-b740-cb33ee80dbb3.PNG)
 
 
 
