@@ -49,6 +49,8 @@ Shafira Khaerunnisa Latif - 5027201072
  * Contoh 1
 
 `POST` https://baboo-kelompok6.herokuapp.com/api/register
+
+
 Parameter
 ```
 {
@@ -60,7 +62,22 @@ Parameter
 ```
 Respons
 
+
 * Contoh 2
+
+`POST` https://baboo-kelompok6.herokuapp.com/api/register
+
+
+Parameter
+```
+{
+    "username": "hecani",
+    "password": "hecani",
+    "email": "hecani@gmail.com",
+    "phone": "081289034450"
+}
+```
+Respons
 
 
 ### login
@@ -77,6 +94,8 @@ Respons
  * Contoh 1
 
 `POST` https://baboo-kelompok6.herokuapp.com/api/login
+
+
 Parameter
 ```
 {
@@ -86,7 +105,21 @@ Parameter
 ```
 Respons
 
+
 * Contoh 2
+
+`POST` https://baboo-kelompok6.herokuapp.com/api/login
+
+
+Parameter
+```
+{
+    "phone": "081289034450",
+    "password": "hecani"
+}
+```
+Respons
+
 
 ### searchproduct
 * Method : `GET`
@@ -102,6 +135,8 @@ Respons
  * Contoh 1
 
 `POST` https://baboo-kelompok6.herokuapp.com/api/search
+
+
 Parameter
 ```
 {
@@ -113,11 +148,30 @@ Respons
 
 * Contoh 2
 
+`POST` https://baboo-kelompok6.herokuapp.com/api/search
+
+
+Parameter
+```
+{
+  "booktitle": "milea",
+    "author": "vidi baik"
+}
+```
+Respons
+
 ### getallproduct
 * Method : `GET`
-* Alamat URL : 
+* Alamat URL : https://baboo-kelompok6.herokuapp.com/api/product
 * Autentikasi : -
 * Parameter : -
+
+ * Contoh 
+
+`GET` https://baboo-kelompok6.herokuapp.com/api/product
+
+Respons
+
 
 ### getalluser
 * Method : `GET`
@@ -153,6 +207,8 @@ Respons
  * Contoh 1
 
 `POST` https://baboo-kelompok6.herokuapp.com/api/user/product
+
+
 Parameter
 ```
 {
@@ -167,6 +223,8 @@ Respons
 * Contoh 2
 
 `POST` https://baboo-kelompok6.herokuapp.com/api/user/product
+
+
 Parameter
 ```
 {
@@ -190,6 +248,8 @@ Respons
 * Contoh 1
 
 `PUT` https://baboo-kelompok6.herokuapp.com/api/user/product
+
+
 Parameter
 ```
 {
@@ -203,6 +263,8 @@ Respons
 * Contoh 2
 
 `PUT` https://baboo-kelompok6.herokuapp.com/api/user/product
+
+
 Parameter
 ```
 {
@@ -235,6 +297,8 @@ Respons
 * Contoh 1
 
 `DEL` https://baboo-kelompok6.herokuapp.com/api/user/product
+
+
 Parameter
 ```
 {
@@ -253,6 +317,7 @@ Respons
   * Contoh 1
 
 `GET` https://baboo-kelompok6.herokuapp.com/api/user/incomingorder
+
 Respons
 
 ### sendorder
@@ -268,6 +333,8 @@ Respons
 * Contoh 1
 
 `POST` https://baboo-kelompok6.herokuapp.com/api/user/send
+
+
 Parameter
 ```
 {
