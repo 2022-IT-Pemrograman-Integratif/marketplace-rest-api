@@ -244,7 +244,7 @@ Respons
 | booktitle | Bebas berupa string atau angka dan tidak ada ketentuan |
 | author | Bebas berupa string atau angka dan tidak ada ketentuan |
 | price | Berupa float |
-| stock | Berupa apa |
+| stock | Berupa integer untuk mengetahui banyaknya stok |
 
  * Contoh 
 
@@ -438,12 +438,23 @@ Respons
   * Alamat URL : https://baboo-kelompok6.herokuapp.com/api/user/myorder
   * Autentikasi : User
   * Parameter : -
+* Contoh 
+
+`GET` https://baboo-kelompok6.herokuapp.com/api/user/myorder
+
+Respons
+
 
 ### getprofile
   * Method : `GET`
   * Alamat URL : https://baboo-kelompok6.herokuapp.com/api/user/profile
   * Autentikasi : User
   * Parameter : -
+* Contoh 
+
+`GET` https://baboo-kelompok6.herokuapp.com/api/user/profile
+
+Respons
 
 ### updateprofile
   * Method : `PUT`
@@ -458,10 +469,42 @@ Respons
 | newphone | Berupa nomor hp baru pada profil yang ingin diperbarui |
 | newpassword | Berupa password baru pada profil yang ingin diperbarui |
 
+* Contoh 1
+
+`PUT` https://baboo-kelompok6.herokuapp.com/api/user/profile
+
+
+Parameter
+```
+{
+    "newusername": "dokumentasibaru",
+    "newemail": "dokumbaru@gmail.com",
+    "newphone": "0812345",
+    "newpassword": "baru123"
+}
+```
+Respons
+
+
+* Contoh 2
+
+`PUT` https://baboo-kelompok6.herokuapp.com/api/user/profile
+
+Respons
+
+
+
 ### getallorder
   * Method : `GET`
   * Alamat URL : https://baboo-kelompok6.herokuapp.com/api/user/order
   * Autentikasi : User
   * Parameter : -
+* Contoh 
+
+`GET` https://baboo-kelompok6.herokuapp.com/api/user/order
+
+Respons
+
+
 
 
